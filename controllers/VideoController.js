@@ -11,6 +11,7 @@ var multer  = require('multer'),
 
 //AWS.config.loadFromPath('../s3_config.json');
 var s3 = new AWS.S3( { params: {Bucket: 'cloud-proyecto3'} } )
+AWS.config.update({region:'us-west-2'});
 
 exports.upload = function(req,res){
   var nombre
